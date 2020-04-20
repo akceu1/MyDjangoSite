@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block head_title %}
+Welcome to
+{% endblock %}
+
+
+{% block styles %}
+.jumbotron {
+    color: red;
+}
+{% endblock %}
+
+
+{# Comment here and it will not render as HTML #}
+
+
+{% block content %}
+<div class="jumbotron row">
+    <h1>Hello {{ username }}</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you
+        scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+    <a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.4/components/navbar/" role="button">View
+        navbar docs
+        &raquo;</a>
+</div>
+{% endblock %}
+
+
+{% block jquery %}
+//alert("Welcome");
+{% endblock %}
