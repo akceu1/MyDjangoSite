@@ -8,22 +8,31 @@ Welcome to
 
 {% block styles %}
 .jumbotron {
-    color: red;
+    /* color: red; */
 }
 {% endblock %}
 
-
-{# Comment here and it will not render as HTML #}
+{% block jumbotron %}
+<main role="main" class="container">
+    <div class="jumbotron row">
+        <h1>Hello {{ username }}</h1>
+        <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you
+            scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+        <a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.4/components/navbar/" role="button">View
+            navbar docs
+            &raquo;</a>
+    </div>
+</main>
+{% endblock jumbotron %}
 
 
 {% block content %}
-<div class="jumbotron row">
-    <h1>Hello {{ username }}</h1>
-    <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you
-        scroll, this navbar remains in its original position and moves with the rest of the page.</p>
-    <a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.4/components/navbar/" role="button">View
-        navbar docs
-        &raquo;</a>
+<main class="container">
+    <div class="row">
+        {% for product in products %}
+        {{ product.title }}
+    {% endfor %}
+</main>
 </div>
 {% endblock %}
 
